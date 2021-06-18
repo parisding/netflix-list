@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.nav-bar {
+  background-color: #000;
+}
+.nav-bar img {
+  height: 100px;
+}
+article {
+  margin: 10px;
+}
