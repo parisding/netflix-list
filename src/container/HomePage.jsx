@@ -3,7 +3,7 @@ import axios from 'axios';
 import { connect } from 'react-redux';
 import { initialize, addToMyList, removeFromMyList } from '../redux/action_creator'
 import List from '../components/List';
-import Recommendations from '../components/Recommendations';
+// import Recommendations from '../components/Recommendations';
 import './homePage.css';
 
 const HomePage = (props) => {
@@ -18,18 +18,18 @@ const HomePage = (props) => {
             });
     }, []);
     return (
-        <div>
+        <div style={{backgroundColor:'black'}}>
             <header className="nav-bar">
                 <img src="../download.png" alt="logo"/>
             </header>
-            <main>
+            <main >
                 <article>
-                    <h2>My List</h2>
-                    <List data={list.mylist} remove={removeFromMyList}/>
+                    <h2 style={{color:'azure'}}>My List</h2>
+                    <List data={list.mylist} btn={'remove'} handler={removeFromMyList}/>
                 </article>
                 <article>
-                    <h2>Recommendation</h2>
-                    <Recommendations data={list.recommendations} add={addToMyList}/>
+                    <h2 style={{color:'azure'}}>Recommendation</h2>
+                    <List data={list.recommendations} btn={'add'} handler={addToMyList}/>
                 </article>
             </main>
         </div>
